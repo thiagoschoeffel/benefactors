@@ -2,6 +2,8 @@
 
 Sistema web para gestão de benfeitores e contribuições, com geração de relatórios em PDF.
 
+<img width="984" height="454" alt="benefactors" src="https://github.com/user-attachments/assets/d2e50036-7f27-4c59-9252-07ee73390f92" />
+
 ## 🚀 Stack
 
 - PHP 8.4 (Laravel 11)
