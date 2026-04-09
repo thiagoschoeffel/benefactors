@@ -1,8 +1,8 @@
 # Benefactors
 
-Benefactors é um sistema web em PHP/Laravel 11 para gestão de benfeitores e contribuições. Cadastra benfeitores com dados pessoais, endereço e cônjuge; registra contribuições por competência mensal. Dashboard com totais e gráfico anual. Geração de relatórios em PDF. Vue 3 + Inertia.js + Tailwind CSS. Docker + MySQL. 
+Benefactors is a web system in PHP/Laravel 11 for managing benefactors and contributions. It registers benefactors with personal data, address, and spouse information; records contributions by monthly competence. Dashboard with totals and annual chart. PDF report generation. Vue 3 + Inertia.js + Tailwind CSS. Docker + MySQL.
 
-Foco em rapidez e simplicidade.
+Focus on speed and simplicity.
 
 <img width="984" height="454" alt="benefactors" src="https://github.com/user-attachments/assets/d2e50036-7f27-4c59-9252-07ee73390f92" />
 
@@ -11,73 +11,73 @@ Foco em rapidez e simplicidade.
 - PHP 8.4 (Laravel 11)
 - Vue 3 + Inertia.js
 - Tailwind CSS
-- Docker & Docker Compose (execução local)
-- MySQL 8.0 (via serviço do Compose)
+- Docker & Docker Compose (local execution)
+- MySQL 8.0 (via Compose service)
 
-## 📦 Rodando com Docker
+## 📦 Running with Docker
 
-### Pré-requisitos
+### Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-### Passos rápidos
+### Quick Steps
 
 ```bash
-# 1) Clonar o repositório e entrar na pasta do projeto
+# 1) Clone the repository and enter the project folder
 git clone https://github.com/thiagoschoeffel/benefactors.git
 cd benefactors
 
-# 2) Copie o arquivo de ambiente e gere a APP_KEY
+# 2) Copy the environment file and generate the APP_KEY
 cp .env.example .env
 php artisan key:generate
 
-# 3) Subir os serviços (app + banco)
+# 3) Start the services (app + database)
 docker compose up -d --build
 ```
 
-Quando subir, acesse:
+Once started, access:
 
 - App: [http://localhost:8001](http://localhost:8001)
-- Banco: host/porta/credenciais definidos no `docker-compose.yml`
+- Database: host/port/credentials defined in `docker-compose.yml`
 
-ℹ️ Por padrão a porta configurada para o app é **8001** e o banco de dados **3306** no `docker-compose.yml`, ajuste conforme sua necessidade.
+ℹ️ By default, the configured port for the app is **8001** and the database **3306** in `docker-compose.yml`. Adjust as needed.
 
-> O banco de dados é criado e populado automaticamente na primeira inicialização. Um usuário administrador é criado com as credenciais abaixo — altere após o primeiro acesso.
+> The database is created and populated automatically on the first initialization. An administrator user is created with the credentials below — change them after the first access.
 >
-> - **E-mail:** admin@example.com
-> - **Senha:** password
+> - **Email:** admin@example.com
+> - **Password:** password
 
-### Comandos úteis
+### Useful Commands
 
-Abaixo alguns comandos úteis para controlar os containers da aplicação.
+Below are some useful commands to manage the application containers.
 
 ```bash
-# Parar
+# Stop
 docker compose stop
 
-# Subir novamente
+# Restart
 docker compose up -d
 
-# Derrubar tudo (remove os containers)
+# Tear down everything (removes containers)
 docker compose down -v
 ```
 
-⚠️ Ao remover os containers com `-v` os dados do banco também são apagados. Os dados persistem enquanto o volume `mysql_data` existir.
+⚠️ When removing containers with `-v`, database data is also deleted. Data persists as long as the `mysql_data` volume exists.
 
-### Estrutura
+### Structure
 
-- `app/` — código da aplicação Laravel (models, controllers, etc.)
-- `resources/js/` — componentes Vue 3 e páginas Inertia
-- `resources/views/` — templates Blade (incluindo PDFs)
-- `database/` — migrations e seeders
-- `docker-compose.yml` — orquestração dos serviços (app/db)
-- `Dockerfile` — imagem PHP 8.4/Apache com build do frontend
+- `app/` — Laravel application code (models, controllers, etc.)
+- `resources/js/` — Vue 3 components and Inertia pages
+- `resources/views/` — Blade templates (including PDFs)
+- `database/` — migrations and seeders
+- `docker-compose.yml` — service orchestration (app/db)
+- `Dockerfile` — PHP 8.4/Apache image with frontend build
 
-## 📄 Licença
+## 📄 License
 
-**Sem licença (No license).**
+**No license.**
 
-Este repositório é disponibilizado apenas para **visualização**. **Não é permitido** usar, copiar, modificar ou distribuir o código sem autorização **por escrito** do autor.
+This repository is made available for **viewing only**. It is **not permitted** to use, copy, modify, or distribute the code without **written** authorization from the author.
 
-Todos os direitos reservados.
+All rights reserved.
