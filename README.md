@@ -1,6 +1,8 @@
 # Benefactors
 
-Sistema web para gestão de benfeitores e contribuições, com geração de relatórios em PDF.
+Benefactors é um sistema web em PHP/Laravel 11 para gestão de benfeitores e contribuições. Cadastra benfeitores com dados pessoais, endereço e cônjuge; registra contribuições por competência mensal. Dashboard com totais e gráfico anual. Geração de relatórios em PDF. Vue 3 + Inertia.js + Tailwind CSS. Docker + MySQL. 
+
+Foco em rapidez e simplicidade.
 
 <img width="984" height="454" alt="benefactors" src="https://github.com/user-attachments/assets/d2e50036-7f27-4c59-9252-07ee73390f92" />
 
